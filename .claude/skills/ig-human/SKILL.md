@@ -15,9 +15,9 @@ Two tools live in this folder and they both actually run. Use them. Do not
 eyeball this.
 
 ```bash
-python3 humanize.py draft.txt --report        # clean it, show what changed
-python3 detect.py draft.txt                    # score it, five checks
-python3 detect.py before.txt after.txt         # prove the delta
+python3 .claude/skills/ig-human/humanize.py draft.txt --report        # clean it, show what changed
+python3 .claude/skills/ig-human/detect.py draft.txt                    # score it, five checks
+python3 .claude/skills/ig-human/detect.py before.txt after.txt         # prove the delta
 ```
 
 Both read `slop.json`: 154 stock words and phrases with plain-English

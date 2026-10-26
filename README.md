@@ -56,12 +56,12 @@ out loud.
 
 | command | what it does |
 | --- | --- |
-| `/ig-reel` | One idea into a Reel. Three hooks from [26 formulas](skills/ig-reel/hooks.json), scored, then the script, the on-screen text and a timed beat sheet. |
+| `/ig-reel` | One idea into a Reel. Three hooks from [26 formulas](.claude/skills/ig-reel/hooks.json), scored, then the script, the on-screen text and a timed beat sheet. |
 | `/ig-viral` | Goes and finds what is working in your niche, ranks it by multiple over each account's own median, names the formula, writes the swipe file. |
 | `/ig-caption` | The caption, linted. Shows you the 125 characters the feed actually shows before the tap. |
 | `/ig-carousel` | Swipe posts. The cover that earns the swipe, slide copy, and the 1080x1350 files. |
 | `/ig-story` | The daily story sequence, which sticker does which job, and the DM funnel that starts with them moving first. |
-| `/ig-profile` | Scores your profile against a [12-part rubric](skills/ig-profile/rubric.json) out of 100, then rewrites in fix-first order. |
+| `/ig-profile` | Scores your profile against a [12-part rubric](.claude/skills/ig-profile/rubric.json) out of 100, then rewrites in fix-first order. |
 | `/ig-plan` | The week. What to post, which format, when, and the 10 accounts to engage with. |
 | `/ig-human` | The humanizer. Two scripts that actually run. See below. |
 | `/ig-comment` | Comments on other people's posts. Nine types, picked by what the post actually is. Never "🔥🔥🔥". |
@@ -170,7 +170,7 @@ python3 detect.py before.txt after.txt       # prove the delta
   The last block of it is Instagram-specific: "stop scrolling", "in today's
   video", "follow for more", "tag someone who needs this", "the algorithm
   loves", "run don't walk". It lives in
-  [`slop.json`](skills/ig-human/slop.json) and it is meant to be edited.
+  [`slop.json`](.claude/skills/ig-human/slop.json) and it is meant to be edited.
 
 **What gets flagged instead of fixed:** "It's not just X, it's Y", rule-of-three
 triads, the video preamble, emoji bullet lists, three shouted words in a row,
@@ -265,7 +265,7 @@ Spoken hooks say their numbers out loud.
 If you re-run this on a bigger or cleaner corpus and get a different answer, I
 would rather know. The measurement script is not in the repo because it depends
 on `yt-dlp`, but the method is four lines and is written out in
-[`/ig-viral`](skills/ig-viral/SKILL.md).
+[`/ig-viral`](.claude/skills/ig-viral/SKILL.md).
 
 ## The fine print, which is the honest part
 
@@ -313,16 +313,16 @@ doing when you read it, Instagram is right.
 ## Files
 
 ```
-skills/ig-reel/hooks.json          26 hook formulas: template, example, on-screen line,
+.claude/skills/ig-reel/hooks.json          26 hook formulas: template, example, on-screen line,
                                    what it is for, how it gets ruined, and a match regex
-skills/ig-reel/hookscore.py        the five-property hook panel
-skills/ig-reel/beats.py            script to timed beat sheet
-skills/ig-caption/caption.py       the truncation preview and the caption linter
-skills/ig-human/slop.json          the lexicon: 154 terms, 18 invisible classes, 16 tells
-skills/ig-human/humanize.py        the three cleaning passes
-skills/ig-human/detect.py          the five-check panel
-skills/ig-viral/swipe.py           outlier ranking and formula classification
-skills/ig-profile/rubric.json      the 100-point profile score
+.claude/skills/ig-reel/hookscore.py        the five-property hook panel
+.claude/skills/ig-reel/beats.py            script to timed beat sheet
+.claude/skills/ig-caption/caption.py       the truncation preview and the caption linter
+.claude/skills/ig-human/slop.json          the lexicon: 154 terms, 18 invisible classes, 16 tells
+.claude/skills/ig-human/humanize.py        the three cleaning passes
+.claude/skills/ig-human/detect.py          the five-check panel
+.claude/skills/ig-viral/swipe.py           outlier ranking and formula classification
+.claude/skills/ig-profile/rubric.json      the 100-point profile score
 templates/voice.md                 your voice profile. Fill this in first.
 ```
 

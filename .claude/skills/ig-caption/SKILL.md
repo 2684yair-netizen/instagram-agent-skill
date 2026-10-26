@@ -13,8 +13,8 @@ description: >-
 One tool lives in this folder and it runs:
 
 ```bash
-python3 caption.py caption.txt
-python3 caption.py caption.txt --keywords "client proposals,agency pricing"
+python3 .claude/skills/ig-caption/caption.py caption.txt
+python3 .claude/skills/ig-caption/caption.py caption.txt --keywords "client proposals,agency pricing"
 ```
 
 It prints the caption the way the feed prints it: the first 125 characters in a
@@ -78,7 +78,7 @@ that reads normally. "Client proposals" as words in line three, not
 Ask for two or three of those terms, then pass them to the linter:
 
 ```bash
-python3 caption.py draft.txt --keywords "client proposals,agency pricing"
+python3 .claude/skills/ig-caption/caption.py draft.txt --keywords "client proposals,agency pricing"
 ```
 
 ## Rules
